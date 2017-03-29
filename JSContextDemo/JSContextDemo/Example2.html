@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=gbk">
+            <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0">
+                <style type="text/css">
+                    *{
+                    margin:0;
+                        padding: 0;
+                    }
+                body,html{
+                    height: 100%;
+                    width: 100%;
+                }
+                section{
+                    height: 100%;
+                    width: 100%;
+                    text-align:center;
+                }
+                .div{
+                float: left;
+                    position: relative;
+                    left: 50%;
+                    top: 30%;
+                    margin-left: -113px;
+                    margin-top: -20px;
+                }
+                </style>
+                <script type="text/javascript" src="Internal.js"></script>
+                <script>
+               // $Ëß£ÊûêÂô&#65533;
+                    function $ (ele) {
+                        return document.querySelector(ele);
+                    };
+                // ÁÇπÂáªÁ°ÆÂÆöÊåâÈíÆ
+                function onClickButton() {
+                    // Â§çÊùÇÊï∞ÊçÆ
+                    var list = [1,2,3];
+                    var params = {"name":"11111", "qq":"937447974", "data":input.value, "list":"dddddddd"};
+                    // JSÈÄöÁü•WKWebView
+                    var moduleName = "business";
+                    var nativeApiName = "do_qrcode";
+                    var tagName = "callback_qrcode";
+                    Internal.callNative(moduleName, nativeApiName, JSON.stringify(params), tagName);
+                }
+                // WKWebViewË∞ÉÁî®JS
+                function ocCallJS(params) {
+                    show.innerHTML = params;
+                }
+                // alertÂØπËØùÊ°&#65533;
+                function ale() {
+                var dataList = [{
+                    shareType:"QQ",
+                    imageUrl:"http://share.csdn.net/uploads/24bd27fd3ad6a559873c4aff3bd64a60/24bd27fd3ad6a559873c4aff3bd64a60_thumb.jpg",
+                    title:"ÂàÜ‰∫´Âõæ‰π¶",
+                    text:"ËøôÊú¨‰π¶ÁöÑÁÆÄ‰ªãÂ§ßÊ¶ÇÊòØËøôÊ†∑",
+                    linkUrl:"http://csdn.net"
+                },
+                                    {
+                    shareType:"WeiXin",
+                    imageUrl:"http://share.csdn.net/uploads/24bd27fd3ad6a559873c4aff3bd64a60/24bd27fd3ad6a559873c4aff3bd64a60_thumb.jpg",
+                    title:"ÂàÜ‰∫´Âõæ‰π¶ÁªôÂæÆ‰ø&#65533;",
+                    text:"ËøôÊú¨‰π¶ÁöÑÁÆÄ‰ªãÊòØ‰∏ìÈó®‰∏∫ÂæÆ‰ø°ÂÆöÂà&#65533;",
+                    linkUrl:"http://csdn.net/w"
+                },
+                {
+                    shareType:"Default", //Ë°®Á§∫ÂÖ∂‰ªñÊú™ÊåáÂÆöÁöÑÂπ≥Âè∞ÔºåÈÉΩÈÄÇÁî®ËØ•ÂàÜ‰∫´ÂÜÖÂÆ&#65533;
+                    imageUrl:"http://share.csdn.net/uploads/24bd27fd3ad6a559873c4aff3bd64a60/24bd27fd3ad6a559873c4aff3bd64a60_thumb.jpg",
+                    title:"ÈÄöÁî®ÂàÜ‰∫´Âõæ‰π¶",
+                    text:"ËøôÊú¨‰π¶ÁöÑÁÆÄ‰ªãÊòØ‰∏∫ÂÖ∂‰ªñÂàÜ‰∫´ÂÆöÂà∂ÁöÑ",
+                    linkUrl:"http://csdn.net/common_test"
+                }
+            ];
+
+            var one_share =  {
+                    shareType:0, //Ë°®Á§∫ÂÖ∂‰ªñÊú™ÊåáÂÆöÁöÑÂπ≥Âè∞ÔºåÈÉΩÈÄÇÁî®ËØ•ÂàÜ‰∫´ÂÜÖÂÆ&#65533;
+                    imageUrl:"http://h.hiphotos.baidu.com/image/w%3D310/sign=bc968ede9545d688a302b4a594c37dab/024f78f0f736afc3065a7888b419ebc4b645128c.jpg",
+                    title:"this is title",
+                    text:"this is text desc",
+                    linkUrl:"http://www.9now.cn"
+                } ;
+            // CtripShare.app_call_custom_share(dataList);
+                Internal.callNative("share", "do_one_share", dataList, "callback_one_share");
+                	// CtripShare.app_call_one_share("QQZone", "http://a.hiphotos.baidu.com/ting/pic/item/314e251f95cad1c8ea16a3567d3e6709c93d5115.jpg" , "ÊàëÊòØtitle", "ÊàëÊòØtext", "", "ctrip_share_11111");
+                }
+                // confirmÈÄâÊã©Ê°&#65533;
+                function firm() {
+                    // CtripBusiness.app_get_channel_info();
+                    Internal.callNative("app", "do_login", null, "callback_token");
+                }
+                // promptËæìÂÖ•Ê°&#65533;
+                function prom() {
+                    var result = prompt("11111","222222");
+                    if(result) {
+                        alert("xxxxxxxxxxx;" + result)
+                    }
+                }
+                </script>
+                </head>
+
+        <body>
+            <section>
+                <div class="div">
+                    <input id="input" style="width:150px;line-height:30px" type="text">
+                        <a style="margin-left:10px;width:50px;line-height:30px;display:inline-block;background-color:blue;color:#fff;text-align:center;" id="button">Confirm</a>
+                        <br>
+                        <span id="show" style="display:inline-block;width:100%;text-align:left;font-size:18px;font-family:'ÂæÆËΩØÈõÖÈªë';color:#000;margin-top:20px;"></span>
+                        <br><br>
+                        <input value="Alert" onclick="ale()" type="submit">
+                        <input value="Option" style="margin-left:20px;" onclick="firm()" type="submit">
+                        <input value="Input" style="margin-left:20px;" id="Input" type="submit">
+                        <input value="Demo" style="margin-left:20px;" id="demo" onclick="prom()" type="submit">
+                        </div>
+            </section>
+            <script type="text/javascript">
+                // ÁïåÈù¢Ê∏≤ÊüìÂÆåÊØïÊâßË°å
+                var input = $('#input'),
+                button = $('#button'),
+                show = $('#show');
+                // demo = $('#demo');
+                // ÊåâÈíÆÁõëÂê¨
+                button.addEventListener('click', onClickButton);
+
+                </script>
+        
+    
+</body></html>
