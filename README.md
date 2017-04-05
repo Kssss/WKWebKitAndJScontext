@@ -10,8 +10,7 @@ DEMO中的见解见:[iOS中的HTML交互简说](http://iliunian.cn/1468458547623
 
 ##UIWebView的交互
 
-###stringByEvaluatingJavaScriptFromString的使用
-UIWebView在2.0时代就有的类，一直到现在（目前9.x）都可以使用的WEB容器，它的方法很简单，在iOS7.0之前JS交互的方法只有一个`stringByEvaluatingJavaScriptFromString`:
+###stringByEvaluatingJavaScriptFromString的使用UIWebView在2.0时代就有的类，一直到现在（目前9.x）都可以使用的WEB容器，它的方法很简单，在iOS7.0之前JS交互的方法只有一个`stringByEvaluatingJavaScriptFromString`:
 
 ```
 - (nullable NSString *)stringByEvaluatingJavaScriptFromString:(NSString *)script;
